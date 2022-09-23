@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .bimg{
+            width: 600px;
+            height: 500px;
+            background-color: aqua;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr; 
+            border: 1px solid black;
+            box-sizing:border-box;
+        }
+        .border{
+            border: 2px solid black;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="bimg">
+        <div class="border">
+            <img src="assets/githublogo.png" width="294px" height="242px">
+        </div>
+        <div class="border"></div>
+        <div class="border"></div>
+        <div class="border"></div>
+    </div>
+    <script>
+        let bimg=document.querySelector("img")
+        bimg.style.position="relative"
+         bimg.style.left="0px"
+         bimg.style.top="1.5px"
+        window.addEventListener("keydown",keypress)
+       function keypress(key){
+        if(key.keyCode=="39"){
+            bimg.style.left="300px"
+            bimg.style.transition="0.8s"
+        }
+        else if(key.keyCode=="40"){
+            bimg.style.top="252px"
+        }
+        else if(key.keyCode=="37"){
+            bimg.style.left="0px"
+        }
+        else if(key.keyCode=="38"){
+            bimg.style.top="1.5px"
+        }
+       }
+    </script>
+    
+</body>
+</html>
